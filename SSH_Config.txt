@@ -1,0 +1,14 @@
+
+hostname Router1
+ip domain-name vic-hotel.local
+
+crypto key generate rsa
+
+
+username admin privilege 15 secret AdminPass123
+
+line vty 0 4
+ transport input ssh
+ login local
+ password Cisco123
+ exec-timeout 5 0
