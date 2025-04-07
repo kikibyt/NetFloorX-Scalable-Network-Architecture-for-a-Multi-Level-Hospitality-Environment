@@ -1,0 +1,14 @@
+
+ip dhcp pool VLAN10
+ network 192.168.1.0 255.255.255.0
+ default-router 192.168.1.1
+ dns-server 8.8.8.8
+
+ip dhcp pool VLAN20
+ network 192.168.2.0 255.255.255.0
+ default-router 192.168.2.1
+ dns-server 8.8.8.8
+
+# Exclude gateway addresses
+ip dhcp excluded-address 192.168.1.1 192.168.1.10
+ip dhcp excluded-address 192.168.2.1 192.168.2.10
