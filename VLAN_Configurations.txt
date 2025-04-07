@@ -1,0 +1,31 @@
+# VLAN Configuration per Department
+
+# 1st Floor
+vlan 80
+ name Reception
+vlan 70
+ name Store
+vlan 60
+ name Logistics
+
+# 2nd Floor
+vlan 50
+ name Finance
+vlan 40
+ name HR
+vlan 30
+ name Sales
+
+# 3rd Floor
+vlan 20
+ name Admin
+vlan 10
+ name IT
+
+# Assign VLANs to switch ports (example)
+interface range fa0/2 - 5
+ switchport mode access
+ switchport access vlan 80
+interface range fa0/6 - 10
+ switchport mode access
+ switchport access vlan 70
